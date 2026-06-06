@@ -1,0 +1,27 @@
+/* Consider the divisors of x
+It can be seen that for every divisor d of x, d+x/d is prime
+
+Find the sum of all positive integers n not exceeding y 
+such that for every divisor d of n, d + n/d is prime */
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+
+bool is_prime(int i) {
+    for (int j = 2; j < i; j++)
+        if (i % j == 0)
+            return false;
+    
+    return true;
+}
+
+int find_divisor(int i) {
+    
+    for(int j = 1; j <= i; j++)
+        if (i%j == 0)
+            cout << j << " ";
+    return 0;
+}
