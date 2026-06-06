@@ -25,3 +25,55 @@ int find_divisor(int i) {
             cout << j << " ";
     return 0;
 }
+
+int main () {
+
+ long x;
+    
+    cout << "Enter value: "; //Generalized the program to take on any value
+    cin >> x;
+
+    
+    cout << "\nThe divisors of " << x << " are: \n";
+    find_divisor(x);
+    cout << "\n\n";
+    
+    cout << "the prime factors are: ";
+    for (long j=2; j < x; j++)
+    {
+        if (is_prime(j) && (x%j == 0)){
+            
+            cout << j << " ";
+        }
+    }
+    
+    
+    for (long i = x; i > 1; i--)
+        if (is_prime(i) && (x % i) == 0){
+            cout << "\n\nThe largest prime factor of the number is: " <<  i ;
+            break; //we break out after finding the largest prime factor
+        }
+    
+  
+    cout << "\n\n";
+    cout << "It can be seen that for every divisor d of " << x << ", d + " << x << "/d is prime: \n";
+    
+    
+    long z = 1;
+    
+    while (z <= x)
+    {
+        if (x % z == 0)
+            cout << z + x/z << " ";
+        z++;
+    }
+    
+    
+    long* ptr = &x;
+    cout << " \n\nMemory location: " << ptr << " ";
+    
+
+    return 0;
+}
+
+
