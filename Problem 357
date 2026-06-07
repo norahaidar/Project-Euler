@@ -57,7 +57,14 @@ int main () {
   
     cout << "\n\n";
     cout << "It can be seen that for every divisor d of " << x << ", d + " << x << "/d is prime: \n";
+  
     
+    long hold = 0;
+    for (long j=1; j<= x ; j++)
+    {
+        hold = hold +j; 
+    }
+    cout << "\n\n"<<"the sum of all positive integers within range are: "<<  hold << "\n";
     
     long z = 1;
     long t = z + x/z;
