@@ -60,12 +60,16 @@ int main () {
     
     
     long z = 1;
-    
+    long t = z + x/z;
+
+
     while (z <= x)
     {
         if (x % z == 0)
             cout << z + x/z << " ";
         z++;
+        t = z + x/z;
+
     }
     
     
