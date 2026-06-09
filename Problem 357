@@ -70,7 +70,7 @@ int main () {
     cout << "\nDivisors of " << hold << " are:\n";
     find_divisor(hold);
     
-    cout<< "\nFor every divisor d of the sum, d+n/d is prime:";
+    cout<< "\n\nFor every divisor d of the sum, d+n/d is prime:";
     find_divisor_prime(hold);
 
 
