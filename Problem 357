@@ -10,30 +10,36 @@ such that for every divisor d of n, d + n/d is prime */
 using namespace std;
 
 
-bool is_prime(int i) {
+bool is_prime(long i) {
     for (int j = 2; j < i; j++)
         if (i % j == 0)
             return false;
     
     return true;
 }
-
-int find_divisor(int i) {
+long find_divisor(long i) {
     
-    for(int j = 1; j <= i; j++)
+    for(long j = 1; j <= i; j++)
         if (i%j == 0)
             cout << j << " ";
     return 0;
 }
 
-int main () {
+long find_divisor_prime(long i) {
+    
+    for(long j = 1; j <= i; j++)
+        if (i%j == 0 && is_prime(j+i/j))
+            cout << j+i/j << " ";
+    return 0;
+}
 
- long x;
+
+
+int main () {
+    long x;
     
     cout << "Enter value: "; //Generalized the program to take on any value
     cin >> x;
-
-    
     cout << "\nThe divisors of " << x << " are: \n";
     find_divisor(x);
     cout << "\n\n";
@@ -47,44 +53,27 @@ int main () {
         }
     }
     
-    
     for (long i = x; i > 1; i--)
         if (is_prime(i) && (x % i) == 0){
             cout << "\n\nThe largest prime factor of the number is: " <<  i ;
             break; //we break out after finding the largest prime factor
         }
     
-  
-    cout << "\n\n";
-    cout << "It can be seen that for every divisor d of " << x << ", d + " << x << "/d is prime: \n";
-  
-    
     long hold = 0;
     for (long j=1; j<= x ; j++)
     {
-        hold = hold +j; 
+        hold = hold +j;
+        
     }
     cout << "\n\n"<<"the sum of all positive integers within range are: "<<  hold << "\n";
+    cout << "\nIt can be seen that for every divisor d of " << hold << ", d + " << hold << "/d is prime: \n";
+    cout << "\nDivisors of " << hold << " are:\n";
+    find_divisor(hold);
     
-    long z = 1;
-    long t = z + x/z;
+    cout<< "\nFor every divisor d of the sum, d+n/d is prime:";
+    find_divisor_prime(hold);
 
 
-    while (z <= x)
-    {
-        if (x % z == 0)
-            cout << z + x/z << " ";
-        z++;
-        t = z + x/z;
-
-    }
-    
-    
-    long* ptr = &x;
-    cout << " \n\nMemory location: " << ptr << " ";
-    
-
-    return 0;
 }
 
 
