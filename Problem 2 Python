@@ -1,3 +1,5 @@
+# using for loop
+
 import sys
 sys.set_int_max_str_digits(0)
 
@@ -17,3 +19,40 @@ for i in range(int(x)):
 
 print("\n")
 print(d)
+
+
+___
+
+# using function
+
+import sys
+sys.set_int_max_str_digits(0)
+
+def fibonacci(a, b, c, d, x, list=[]):
+    list.insert(x,c)
+    c = a + b
+    a = b
+    b = c 
+    if 
+
+    else
+        return  list
+
+x = input("Enter range: ")
+a = 1
+b = 1
+c = 1
+d = 0
+result = fibonacci(a,b,c,d, int(x))
+print(result)
+
+_____
+
+n = 10
+a, b = 0, 1
+
+for _ in range(n):
+    print(a, end=" ")
+    a, b = b, a + b
+______
+
