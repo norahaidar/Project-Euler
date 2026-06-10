@@ -1,21 +1,19 @@
 import sys
 sys.set_int_max_str_digits(0)
-
 x = input("Enter range: ")
 a = 1
 b = 1
 c = 1
-fib = []
+d = 0
+#fib = []
 for i in range(int(x)):
-    fib.insert(i,c)
+# fib.insert(i,c)
     c = a+b
     a = b
     b = c
-
-print(fib)
-even = []
-for i in range(int(x)):
-    if fib[i] % 2 ==0:
-        even.insert(i,fib[i])
-
-print(even)
+    if c%2==0:
+        d=d+c
+        
+    print(c)
+print("\n")
+print(d)
