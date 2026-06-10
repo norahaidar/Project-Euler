@@ -48,6 +48,8 @@ print(result)
 
 _____
 
+#using iteration
+
 n = 10
 a, b = 0, 1
 
