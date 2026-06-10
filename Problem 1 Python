@@ -1,0 +1,8 @@
+j=[]
+x = input("Enter range: ")
+for i in range(int(x)):
+    if  i % 3 == 0 or i%5 ==0:
+        j.insert(i,i)
+print(j)
+
+print(sum(j))
