@@ -1,0 +1,18 @@
+x = input("Enter range: ")
+a = 1
+b = 1
+c = 1
+fib = []
+for i in range(int(x)):
+    fib.insert(i,c)
+    c = a+b
+    a = b
+    b = c
+
+print(fib)
+even = []
+for i in range(int(x)):
+    if fib[i] % 2 ==0:
+        even.insert(i,fib[i])
+
+print(even)
